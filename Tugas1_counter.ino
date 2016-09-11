@@ -1,5 +1,5 @@
 int ledPin[] ={8,9,10,11};
-int maxCount = 256;
+int maxCount = 16;
 int delayInterval = 1000;
 
 void setup() {
@@ -35,4 +35,32 @@ while(counter < maxCount){
     
   }
   }
+}
+void displayBinary(byte numToShow)
+{
+  for (int i=0; i < 8 ;i++)
+  {
+  if (bitRead(numToShow, i)==1)
+  {
+    digitalWrite(ledPin[i], HIGH);
+  }
+    else
+    {
+      digitalWrite(ledPin[i], LOW);
+    }
+}
+}
+
+void displayBinaryReverse(byte numToShow)
+{
+  for (int i=8; i >=0 ;i--)
+  {
+  if (bitRead(numToShow, i)==1)
+  {
+    digitalWrite(ledPin[i], HIGH);
+  }
+    else
+    {
+      digitalWrite(ledPin[i], LOW);
+    }
 }
