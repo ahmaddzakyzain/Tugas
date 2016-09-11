@@ -1,0 +1,38 @@
+int ledPin[] ={8,9,10,11};
+int maxCount = 256;
+int delayInterval = 1000;
+
+void setup() {
+  // put your setup code here, to run once:
+  for (int i=8 ; i<12 ; i++)
+  {
+    pinMode(ledPin[i], OUTPUT);
+  }
+digitalWrite(A0, HIGH);
+digitalWrite(A1, HIGH);
+digitalWrite(A2, HIGH);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  
+  //for (int counter = 0; counter < maxCount;counter++)
+  int counter =0;
+while(counter < maxCount){
+  if(digitalRead(A0)==LOW)
+  {
+    counter++;
+    displayBinary(counter);
+    delay(delayInterval);
+    
+  }
+  if(digitalRead(A1)==LOW)
+  {
+    counter--;
+    displayBinaryReverse(counter);
+    delay(delayInterval);
+    
+  }
+  }
+}
