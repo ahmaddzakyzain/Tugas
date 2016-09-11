@@ -1,4 +1,3 @@
-//int i=8;
 void setup() {
   // put your setup code here, to run once:
 pinMode(8, OUTPUT);
@@ -16,21 +15,21 @@ digitalWrite(A2, HIGH);
 void loop() {
   // put your main code here, to run repeatedly:
   for(int x=0;x<16;x++){
-  int i=8;
+  int i=7;
 while(i<12){
 if(digitalRead(A0)==LOW){
   i++;
   digitalWrite(i, HIGH);      
-  delay(500);
+  delay(1000);
   digitalWrite(i, LOW);      
-  delay(500);
+  delay(1000);
   }
    else if(digitalRead(A1)==LOW){
     i--;
     digitalWrite(i,HIGH);
-    delay(500);
+    delay(1000);
   digitalWrite(i, LOW);      
-  delay(500);
+  delay(1000);
     }}}
    
 }        
